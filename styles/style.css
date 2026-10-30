@@ -77,3 +77,63 @@ footer {
         padding: 40px 15px;
     }
 }
+
+
+/* ===== Feedback Page ===== */
+.feedback-page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.feedback-page h2,
+.feedback-intro {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+.contact-info,
+.feedback-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-info p {
+  margin: 10px 0;
+}
+.feedback-form form {
+  display: flex;
+  flex-direction: column;
+}
+.feedback-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.feedback-form input,
+.feedback-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+.feedback-form button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #d35400;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.feedback-form button:hover {
+  background: #a04000;
+}
+
+@media (max-width: 768px) {
+  .feedback-page {
+    grid-template-columns: 1fr;
+  }
+}
