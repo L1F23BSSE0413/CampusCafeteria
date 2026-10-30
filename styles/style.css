@@ -14,10 +14,7 @@ body {
     color: #333;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     background: linear-gradient(135deg, #7b3f00, #9a5a19);
@@ -35,10 +32,7 @@ header p {
     font-size: 16px;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav {
     background-color: #3e2723;
@@ -62,10 +56,7 @@ nav a:hover {
     color: #ffc107;
 }
 
-
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 
 main {
     min-height: 350px;
@@ -91,10 +82,20 @@ main > section > p {
     color: #666;
 }
 
+/* HOME SECTION */
 
-/* =========================
-   MENU ITEMS
-========================= */
+main > section:first-child {
+    background: linear-gradient(135deg, #fff8ed, #f5e8d2);
+    padding: 55px 25px;
+    border-radius: 18px;
+    margin-bottom: 65px;
+}
+
+main > section:first-child h2 {
+    font-size: 42px;
+}
+
+/* MENU ITEMS */
 
 article {
     display: inline-block;
@@ -116,10 +117,7 @@ article:hover {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-
-/* =========================
-   FOOD IMAGES
-========================= */
+/* FOOD IMAGES */
 
 article img {
     width: 100%;
@@ -145,30 +143,7 @@ article strong {
     font-size: 18px;
 }
 
-
-/* =========================
-   STUDENT FAVORITES
-========================= */
-
-main > section:first-child {
-    background: linear-gradient(
-        135deg,
-        #fff8ed,
-        #f5e8d2
-    );
-    padding: 55px 25px;
-    border-radius: 18px;
-    margin-bottom: 65px;
-}
-
-main > section:first-child h2 {
-    font-size: 42px;
-}
-
-
-/* =========================
-   STUDENT DEALS
-========================= */
+/* STUDENT DEALS */
 
 article p strong {
     color: #7b3f00;
@@ -178,10 +153,7 @@ article del {
     color: #999;
 }
 
-
-/* =========================
-   ORDER LINK
-========================= */
+/* ORDER LINK */
 
 main a {
     color: #7b3f00;
@@ -192,10 +164,7 @@ main a:hover {
     color: #ffc107;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     background-color: #3e2723;
@@ -208,13 +177,9 @@ footer p {
     margin: 0;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* TABLET RESPONSIVE */
 
 @media (max-width: 900px) {
-
     article {
         width: 45%;
     }
@@ -228,9 +193,9 @@ footer p {
     }
 }
 
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 600px) {
-
     header h1 {
         font-size: 30px;
     }
