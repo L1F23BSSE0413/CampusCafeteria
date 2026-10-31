@@ -1,46 +1,60 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Your Order</title>
+
+    <title>Food Corner - Order Now</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- HEADER -->
+
     <header>
         <h1>Food Corner</h1>
-        <p>Place Your Order</p>
+        <p>Fresh Food, Delicious Taste!</p>
     </header>
 
     <!-- NAVIGATION -->
+
     <nav>
         <a href="index.html">Home</a>
-        <a href="order.html">Order</a>
+        <a href="menu.html">Menu</a>
+        <a href="deals.html">Deals</a>
+        <a href="order.html">Order Now</a>
         <a href="feedback.html">Feedback</a>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
+
     <main>
 
+        <!-- INTRODUCTION -->
+
         <section>
-            <h2>Order Your Favourite Food</h2>
-            <p>Fill out the form below to place your order.</p>
+            <h2>Place Your Order</h2>
+            <p>Choose your favourite food and enjoy our delicious meals.</p>
+            <p>Fill out the form below to complete your order.</p>
         </section>
 
-        <!-- FOOD MENU -->
+        <!-- FOOD ITEMS -->
+
         <section>
-            <h2>Our Food Menu</h2>
+
+            <h2>Our Popular Food</h2>
 
             <article>
                 <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
                 alt="Chicken Burger">
 
                 <h3>Chicken Burger</h3>
-                <p>Price: <strong>Rs. 450</strong></p>
+                <p>Fresh and crispy chicken burger.</p>
+                <p><strong>Rs. 450</strong></p>
             </article>
 
             <article>
@@ -48,7 +62,8 @@
                 alt="Zinger Burger">
 
                 <h3>Zinger Burger</h3>
-                <p>Price: <strong>Rs. 550</strong></p>
+                <p>Crispy chicken with special sauce.</p>
+                <p><strong>Rs. 550</strong></p>
             </article>
 
             <article>
@@ -56,7 +71,8 @@
                 alt="Beef Burger">
 
                 <h3>Beef Burger</h3>
-                <p>Price: <strong>Rs. 650</strong></p>
+                <p>Juicy beef patty with fresh vegetables.</p>
+                <p><strong>Rs. 650</strong></p>
             </article>
 
             <article>
@@ -64,7 +80,8 @@
                 alt="Chicken Pizza">
 
                 <h3>Chicken Pizza</h3>
-                <p>Price: <strong>Rs. 1200</strong></p>
+                <p>Delicious chicken pizza with cheese.</p>
+                <p><strong>Rs. 1200</strong></p>
             </article>
 
             <article>
@@ -72,7 +89,8 @@
                 alt="Fajita Pizza">
 
                 <h3>Fajita Pizza</h3>
-                <p>Price: <strong>Rs. 1400</strong></p>
+                <p>Spicy chicken fajita with vegetables.</p>
+                <p><strong>Rs. 1400</strong></p>
             </article>
 
             <article>
@@ -80,13 +98,15 @@
                 alt="Cheese Pizza">
 
                 <h3>Cheese Pizza</h3>
-                <p>Price: <strong>Rs. 1300</strong></p>
+                <p>Pizza loaded with melted mozzarella cheese.</p>
+                <p><strong>Rs. 1300</strong></p>
             </article>
 
         </section>
 
         <!-- ORDER FORM -->
-        <section class="feedback-page">
+
+        <section class="order-page">
 
             <h2>Customer Order Form</h2>
 
@@ -96,7 +116,7 @@
 
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name"
-                    placeholder="Enter your name" required>
+                    placeholder="Enter your full name" required>
 
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email"
@@ -112,8 +132,8 @@
                     required></textarea>
 
                     <label for="food">Select Your Food:</label>
-                    <select id="food" name="food" required>
 
+                    <select id="food" name="food" required>
                         <option value="">Choose Food</option>
                         <option value="Chicken Burger">Chicken Burger</option>
                         <option value="Zinger Burger">Zinger Burger</option>
@@ -121,21 +141,19 @@
                         <option value="Chicken Pizza">Chicken Pizza</option>
                         <option value="Fajita Pizza">Fajita Pizza</option>
                         <option value="Cheese Pizza">Cheese Pizza</option>
-
                     </select>
 
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity"
-                    name="quantity" min="1" max="20"
+                    name="quantity" min="1"
                     placeholder="Enter quantity" required>
 
                     <label for="payment">Payment Method:</label>
-                    <select id="payment" name="payment" required>
 
+                    <select id="payment" name="payment" required>
                         <option value="">Select Payment Method</option>
                         <option value="Cash">Cash on Delivery</option>
                         <option value="Online">Online Payment</option>
-
                     </select>
 
                     <label for="instructions">Special Instructions:</label>
@@ -154,10 +172,10 @@
     </main>
 
     <!-- FOOTER -->
+
     <footer>
         <p>&copy; 2026 Food Corner. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
-
