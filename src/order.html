@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Campus Bites</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Bites</h1>
+        <p>Fresh Food, Happy Students!</p>
+        <p>Your Favourite Food, Just a Few Steps Away!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="deals.html">Daily Deals</a>
+        <a href="order.html">How to Order</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Order Your Favourite Food</h2>
+            <p>Choose from our delicious food options and fill out the form below.</p>
+        </section>
+
+        <section>
+            <h2>Popular Choices</h2>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
+                     alt="Chicken burger">
+                <h3>Chicken Burger</h3>
+                <p>Fresh and juicy chicken burger.</p>
+                <p><strong>Rs. 450</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600"
+                     alt="Zinger burger">
+                <h3>Zinger Burger</h3>
+                <p>Crispy chicken with fresh vegetables.</p>
+                <p><strong>Rs. 550</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600"
+                     alt="Beef burger">
+                <h3>Beef Burger</h3>
+                <p>Delicious beef patty with special sauce.</p>
+                <p><strong>Rs. 650</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600"
+                     alt="Chicken pizza">
+                <h3>Chicken Pizza</h3>
+                <p>Loaded with chicken and melted cheese.</p>
+                <p><strong>Rs. 1200</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600"
+                     alt="Fajita pizza">
+                <h3>Fajita Pizza</h3>
+                <p>A tasty combination of chicken and vegetables.</p>
+                <p><strong>Rs. 1400</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=600"
+                     alt="Cheese pizza">
+                <h3>Cheese Pizza</h3>
+                <p>Enjoy a delicious pizza with extra cheese.</p>
+                <p><strong>Rs. 1300</strong></p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Place Your Order</h2>
+            <p>Enter your details and select your favourite food.</p>
+
+            <article style="width: 80%; max-width: 600px; min-width: 280px;">
+
+                <form action="#" method="post">
+
+                    <p>
+                        <label for="name"><strong>Full Name</strong></label><br>
+                        <input type="text" id="name" name="name"
+                               placeholder="Enter your name" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
+
+                    <p>
+                        <label for="email"><strong>Email Address</strong></label><br>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter your email" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
+
+                    <p>
+                        <label for="phone"><strong>Phone Number</strong></label><br>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter your phone number" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
+
+                    <p>
+                        <label for="address"><strong>Delivery Address</strong></label><br>
+                        <textarea id="address" name="address"
+                                  placeholder="Enter your address" required
+                                  style="width: 100%; padding: 10px; margin-top: 8px;"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="food"><strong>Select Food</strong></label><br>
+                        <select id="food" name="food" required
+                                style="width: 100%; padding: 10px; margin-top: 8px;">
+                            <option value="">Choose your food</option>
+                            <option>Chicken Burger - Rs. 450</option>
+                            <option>Zinger Burger - Rs. 550</option>
+                            <option>Beef Burger - Rs. 650</option>
+                            <option>Chicken Pizza - Rs. 1200</option>
+                            <option>Fajita Pizza - Rs. 1400</option>
+                            <option>Cheese Pizza - Rs. 1300</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="quantity"><strong>Quantity</strong></label><br>
+                        <input type="number" id="quantity" name="quantity"
+                               min="1" max="20" value="1" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
+
+                    <p>
+                        <strong>Payment Method</strong><br><br>
+                        <input type="radio" id="cash" name="payment"
+                               value="Cash" required>
+                        <label for="cash">Cash on Delivery</label><br>
+
+                        <input type="radio" id="online" name="payment"
+                               value="Online">
+                        <label for="online">Online Payment</label>
+                    </p>
+
+                    <p>
+                        <label for="instructions"><strong>Special Instructions</strong></label><br>
+                        <textarea id="instructions" name="instructions"
+                                  placeholder="Any special instructions?"
+                                  style="width: 100%; padding: 10px; margin-top: 8px;"></textarea>
+                    </p>
+
+                    <button type="submit"
+                            style="background-color: #7b3f00; color: white;
+                            padding: 12px 25px; border: none; border-radius: 5px;
+                            cursor: pointer;">
+                        Place Order
+                    </button>
+
+                </form>
+
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Bites. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
