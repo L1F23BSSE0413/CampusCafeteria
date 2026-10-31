@@ -1,524 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Food Corner - Order Now</title>
-
-    <style>
-
-        /* GENERAL */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f5ef;
-            color: #333;
-        }
-
-        /* HEADER */
-
-        header {
-            background: linear-gradient(135deg, #7b3f00, #9a5a19);
-            color: white;
-            text-align: center;
-            padding: 32px 20px;
-        }
-
-        header h1 {
-            font-size: 38px;
-            margin-bottom: 8px;
-        }
-
-        header p {
-            font-size: 16px;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            background-color: #3e2723;
-            text-align: center;
-            padding: 16px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 16px;
-            font-weight: bold;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffc107;
-        }
-
-        /* MAIN */
-
-        main {
-            min-height: 350px;
-            padding: 55px 30px;
-            max-width: 1250px;
-            margin: auto;
-        }
-
-        main > section {
-            margin-bottom: 70px;
-            text-align: center;
-        }
-
-        main > section > h2 {
-            color: #7b3f00;
-            margin-bottom: 12px;
-            font-size: 32px;
-        }
-
-        main > section > p {
-            margin-bottom: 10px;
-            line-height: 1.7;
-            color: #666;
-        }
-
-        /* INTRO SECTION */
-
-        main > section:first-child {
-            background: linear-gradient(135deg, #fff8ed, #f5e8d2);
-            padding: 55px 25px;
-            border-radius: 18px;
-            margin-bottom: 65px;
-        }
-
-        main > section:first-child h2 {
-            font-size: 42px;
-        }
-
-        /* FOOD CARDS */
-
-        article {
-            display: inline-block;
-            vertical-align: top;
-            width: 30%;
-            min-width: 280px;
-            margin: 15px;
-            background-color: white;
-            border-radius: 14px;
-            overflow: hidden;
-            text-align: left;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid #eee;
-            transition: 0.3s;
-        }
-
-        article:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-        }
-
-        /* FOOD IMAGES */
-
-        article img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-            display: block;
-        }
-
-        article h3 {
-            color: #7b3f00;
-            font-size: 21px;
-            margin: 20px 20px 10px;
-        }
-
-        article p {
-            margin: 8px 20px;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        article strong {
-            color: #3e2723;
-            font-size: 18px;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background-color: #3e2723;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* ORDER FORM */
-
-        .order-page {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 25px;
-            background: linear-gradient(135deg, #fff8ed, #f5e8d2);
-            border-radius: 18px;
-        }
-
-        .order-page h2 {
-            color: #7b3f00;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .feedback-form {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .feedback-form form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feedback-form label {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .feedback-form input,
-        .feedback-form textarea,
-        .feedback-form select {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .feedback-form button {
-            margin-top: 15px;
-            padding: 12px;
-            background: #7b3f00;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .feedback-form button:hover {
-            background: #3e2723;
-        }
-
-        /* TABLET RESPONSIVE */
-
-        @media (max-width: 900px) {
-
-            article {
-                width: 45%;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            main {
-                padding: 45px 20px;
-            }
-        }
-
-        /* MOBILE RESPONSIVE */
-
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            nav {
-                position: static;
-            }
-
-            nav a {
-                display: block;
-                margin: 13px 0;
-            }
-
-            main {
-                padding: 35px 15px;
-            }
-
-            main > section > h2 {
-                font-size: 27px;
-            }
-
-            main > section:first-child h2 {
-                font-size: 32px;
-            }
-
-            article {
-                display: block;
-                width: 100%;
-                min-width: 0;
-                margin: 20px 0;
-            }
-
-            article img {
-                height: 220px;
-            }
-
-            .order-page {
-                padding: 15px;
-                margin: 15px auto;
-            }
-
-            .feedback-form {
-                padding: 15px;
-            }
-        }
-
-    </style>
-
+    <title>Order Now - Campus Bites</title>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-
     <header>
-        <h1>Food Corner</h1>
-        <p>Fresh Food, Delicious Taste!</p>
+        <h1>Campus Bites</h1>
+        <p>Fresh Food, Happy Students!</p>
+        <p>Your Favourite Food, Just a Few Steps Away!</p>
     </header>
-
-    <!-- NAVIGATION -->
 
     <nav>
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
-        <a href="deals.html">Deals</a>
-        <a href="order.html">Order Now</a>
+        <a href="deals.html">Daily Deals</a>
+        <a href="order.html">How to Order</a>
         <a href="feedback.html">Feedback</a>
     </nav>
 
-    <!-- MAIN CONTENT -->
-
     <main>
 
-        <!-- INTRODUCTION -->
+        <section>
+            <h2>Order Your Favourite Food</h2>
+            <p>Choose from our delicious food options and fill out the form below.</p>
+        </section>
+
+        <section>
+            <h2>Popular Choices</h2>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
+                     alt="Chicken burger">
+                <h3>Chicken Burger</h3>
+                <p>Fresh and juicy chicken burger.</p>
+                <p><strong>Rs. 450</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600"
+                     alt="Zinger burger">
+                <h3>Zinger Burger</h3>
+                <p>Crispy chicken with fresh vegetables.</p>
+                <p><strong>Rs. 550</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600"
+                     alt="Beef burger">
+                <h3>Beef Burger</h3>
+                <p>Delicious beef patty with special sauce.</p>
+                <p><strong>Rs. 650</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600"
+                     alt="Chicken pizza">
+                <h3>Chicken Pizza</h3>
+                <p>Loaded with chicken and melted cheese.</p>
+                <p><strong>Rs. 1200</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600"
+                     alt="Fajita pizza">
+                <h3>Fajita Pizza</h3>
+                <p>A tasty combination of chicken and vegetables.</p>
+                <p><strong>Rs. 1400</strong></p>
+            </article>
+
+            <article>
+                <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=600"
+                     alt="Cheese pizza">
+                <h3>Cheese Pizza</h3>
+                <p>Enjoy a delicious pizza with extra cheese.</p>
+                <p><strong>Rs. 1300</strong></p>
+            </article>
+        </section>
 
         <section>
             <h2>Place Your Order</h2>
+            <p>Enter your details and select your favourite food.</p>
 
-            <p>Choose your favourite food and enjoy our delicious meals.</p>
-
-            <p>Fill out the form below to complete your order.</p>
-        </section>
-
-        <!-- FOOD MENU -->
-
-        <section>
-
-            <h2>Our Popular Food</h2>
-
-            <article>
-
-                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
-                alt="Chicken Burger">
-
-                <h3>Chicken Burger</h3>
-
-                <p>Fresh and crispy chicken burger.</p>
-
-                <p><strong>Rs. 450</strong></p>
-
-            </article>
-
-            <article>
-
-                <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600"
-                alt="Zinger Burger">
-
-                <h3>Zinger Burger</h3>
-
-                <p>Crispy chicken with special sauce.</p>
-
-                <p><strong>Rs. 550</strong></p>
-
-            </article>
-
-            <article>
-
-                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600"
-                alt="Beef Burger">
-
-                <h3>Beef Burger</h3>
-
-                <p>Juicy beef patty with fresh vegetables.</p>
-
-                <p><strong>Rs. 650</strong></p>
-
-            </article>
-
-            <article>
-
-                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600"
-                alt="Chicken Pizza">
-
-                <h3>Chicken Pizza</h3>
-
-                <p>Delicious chicken pizza with cheese.</p>
-
-                <p><strong>Rs. 1200</strong></p>
-
-            </article>
-
-            <article>
-
-                <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600"
-                alt="Fajita Pizza">
-
-                <h3>Fajita Pizza</h3>
-
-                <p>Spicy chicken fajita with vegetables.</p>
-
-                <p><strong>Rs. 1400</strong></p>
-
-            </article>
-
-            <article>
-
-                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600"
-                alt="Cheese Pizza">
-
-                <h3>Cheese Pizza</h3>
-
-                <p>Pizza loaded with melted mozzarella cheese.</p>
-
-                <p><strong>Rs. 1300</strong></p>
-
-            </article>
-
-        </section>
-
-        <!-- ORDER FORM -->
-
-        <section class="order-page">
-
-            <h2>Customer Order Form</h2>
-
-            <div class="feedback-form">
+            <article style="width: 80%; max-width: 600px; min-width: 280px;">
 
                 <form action="#" method="post">
 
-                    <label for="name">Full Name:</label>
+                    <p>
+                        <label for="name"><strong>Full Name</strong></label><br>
+                        <input type="text" id="name" name="name"
+                               placeholder="Enter your name" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
 
-                    <input type="text" id="name" name="name"
-                    placeholder="Enter your full name" required>
+                    <p>
+                        <label for="email"><strong>Email Address</strong></label><br>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter your email" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
 
+                    <p>
+                        <label for="phone"><strong>Phone Number</strong></label><br>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter your phone number" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
 
-                    <label for="email">Email Address:</label>
+                    <p>
+                        <label for="address"><strong>Delivery Address</strong></label><br>
+                        <textarea id="address" name="address"
+                                  placeholder="Enter your address" required
+                                  style="width: 100%; padding: 10px; margin-top: 8px;"></textarea>
+                    </p>
 
-                    <input type="email" id="email" name="email"
-                    placeholder="Enter your email" required>
+                    <p>
+                        <label for="food"><strong>Select Food</strong></label><br>
+                        <select id="food" name="food" required
+                                style="width: 100%; padding: 10px; margin-top: 8px;">
+                            <option value="">Choose your food</option>
+                            <option>Chicken Burger - Rs. 450</option>
+                            <option>Zinger Burger - Rs. 550</option>
+                            <option>Beef Burger - Rs. 650</option>
+                            <option>Chicken Pizza - Rs. 1200</option>
+                            <option>Fajita Pizza - Rs. 1400</option>
+                            <option>Cheese Pizza - Rs. 1300</option>
+                        </select>
+                    </p>
 
+                    <p>
+                        <label for="quantity"><strong>Quantity</strong></label><br>
+                        <input type="number" id="quantity" name="quantity"
+                               min="1" max="20" value="1" required
+                               style="width: 100%; padding: 10px; margin-top: 8px;">
+                    </p>
 
-                    <label for="phone">Phone Number:</label>
+                    <p>
+                        <strong>Payment Method</strong><br><br>
+                        <input type="radio" id="cash" name="payment"
+                               value="Cash" required>
+                        <label for="cash">Cash on Delivery</label><br>
 
-                    <input type="tel" id="phone" name="phone"
-                    placeholder="Enter your phone number" required>
+                        <input type="radio" id="online" name="payment"
+                               value="Online">
+                        <label for="online">Online Payment</label>
+                    </p>
 
+                    <p>
+                        <label for="instructions"><strong>Special Instructions</strong></label><br>
+                        <textarea id="instructions" name="instructions"
+                                  placeholder="Any special instructions?"
+                                  style="width: 100%; padding: 10px; margin-top: 8px;"></textarea>
+                    </p>
 
-                    <label for="address">Delivery Address:</label>
-
-                    <textarea id="address" name="address"
-                    rows="4" placeholder="Enter your address"
-                    required></textarea>
-
-
-                    <label for="food">Select Your Food:</label>
-
-                    <select id="food" name="food" required>
-
-                        <option value="">Choose Food</option>
-
-                        <option value="Chicken Burger">Chicken Burger</option>
-
-                        <option value="Zinger Burger">Zinger Burger</option>
-
-                        <option value="Beef Burger">Beef Burger</option>
-
-                        <option value="Chicken Pizza">Chicken Pizza</option>
-
-                        <option value="Fajita Pizza">Fajita Pizza</option>
-
-                        <option value="Cheese Pizza">Cheese Pizza</option>
-
-                    </select>
-
-
-                    <label for="quantity">Quantity:</label>
-
-                    <input type="number" id="quantity"
-                    name="quantity" min="1" max="20"
-                    placeholder="Enter quantity" required>
-
-
-                    <label for="payment">Payment Method:</label>
-
-                    <select id="payment" name="payment" required>
-
-                        <option value="">Select Payment Method</option>
-
-                        <option value="Cash">Cash on Delivery</option>
-
-                        <option value="Online">Online Payment</option>
-
-                    </select>
-
-
-                    <label for="instructions">Special Instructions:</label>
-
-                    <textarea id="instructions"
-                    name="instructions" rows="3"
-                    placeholder="Any special instructions?"></textarea>
-
-
-                    <button type="submit">Place Order</button>
+                    <button type="submit"
+                            style="background-color: #7b3f00; color: white;
+                            padding: 12px 25px; border: none; border-radius: 5px;
+                            cursor: pointer;">
+                        Place Order
+                    </button>
 
                 </form>
 
-            </div>
-
+            </article>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-
     <footer>
-
-        <p>&copy; 2026 Food Corner. All Rights Reserved.</p>
-
+        <p>&copy; 2026 Campus Bites. All Rights Reserved.</p>
     </footer>
 
 </body>
-
 </html>
